@@ -1,0 +1,9 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Lars Erik Wik
+	email = lars.erik.wik@northern.tech
+
+[alias]
+graph = log --all --decorate --oneline --graph
+plog = log -n 8 --pretty=oneline
