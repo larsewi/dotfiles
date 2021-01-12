@@ -6,4 +6,4 @@
 
 [alias]
 graph = log --all --decorate --oneline --graph
-plog = log -n 8 --pretty=oneline
+plog = log -n 8 --oneline
