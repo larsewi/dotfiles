@@ -1,6 +1,0 @@
-# Hub
-alias cfe-install="python3 /northern.tech/cfengine/starter_pack/cf-builder.py --install --all-repos"
-alias cfe-acceptance="/northern.tech/cfengine/core/tests/acceptance/testall --agent=/var/cfengine/bin/cf-agent"
-
-# Dev
-alias cfe-compile="python3 /northern.tech/cfengine/starter_pack/cf-builder.py --autogen --make --core --masterfiles --enterprise --nova"
