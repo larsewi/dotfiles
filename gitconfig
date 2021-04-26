@@ -5,5 +5,5 @@
 	email = lars.erik.wik@northern.tech
 
 [alias]
-graph = log --all --decorate --oneline --graph
-plog = log -n 8 --oneline
+	graph = log --all --decorate --oneline --graph
+	plog = log -n 8 --oneline
