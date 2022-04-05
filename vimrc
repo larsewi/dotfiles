@@ -24,3 +24,7 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+
+" Markdown syntax
+let g:markdown_fenced_languages = ['c', 'cpp', 'python', 'bash', 'json', 'cf3']
+
