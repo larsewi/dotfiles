@@ -18,3 +18,9 @@ set autoindent
 
 " Use clipboard
 set clipboard=unnamedplus
+
+" Indents
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
