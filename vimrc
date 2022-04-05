@@ -15,3 +15,6 @@ set nrformats-=octal
 
 " Turn on autoindent
 set autoindent
+
+" Use clipboard
+set clipboard=unnamedplus
