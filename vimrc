@@ -18,6 +18,7 @@ set nrformats-=octal
 
 " Use clipboard
 set clipboard=unnamedplus
+" set clipboard^=unnamed " on macos
 
 " Indents
 set autoindent
