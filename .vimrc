@@ -30,5 +30,5 @@ set shiftwidth=4
 " Backspace
 set backspace=indent,eol,start
 
-# Show row/col
+" Show row/col
 set ruler
