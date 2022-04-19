@@ -32,3 +32,6 @@ set backspace=indent,eol,start
 
 " Show row/col
 set ruler
+
+" Explorer
+let g:netrw_banner = 0
