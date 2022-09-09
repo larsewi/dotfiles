@@ -1,16 +1,16 @@
 [
     {
-        "key": "ctrl+'",
+        "key": "ctrl+[backquote]",
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+'",
+        "key": "ctrl+[backquote]",
         "command": "workbench.action.terminal.focus",
         "when": "!terminalFocus"
     },
     {
-        "key": "ctrl+'",
+        "key": "ctrl+[backquote]",
         "command": "-editor.action.jumpToBracket",
         "when": "editorTextFocus"
     },
