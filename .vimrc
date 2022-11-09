@@ -12,6 +12,7 @@ set expandtab
 set number
 filetype indent on
 set autoindent
+set nofoldenable " disable code folding
 
 " Markdown syntax
 let g:markdown_fenced_languages = ['c', 'cpp', 'python', 'bash', 'json', 'cf3']
