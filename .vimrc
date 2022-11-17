@@ -5,23 +5,34 @@ call plug#begin()
     Plug 'tpope/vim-commentary'
 call plug#end()
 
+" Enable syntax highlighting
 syntax enable
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set number
-filetype indent on
-set autoindent
-set nofoldenable " disable code folding
 
 " Markdown syntax
 let g:markdown_fenced_languages = ['c', 'cpp', 'python', 'bash', 'json', 'cf3']
 
+" disable code folding
+set nofoldenable
+
+" Configure indentation
+set tabstop=4
+set shiftwidth=4
+set expandtab
+filetype indent on
+set autoindent
+
+" Use clipboard
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed "OSX
+else
+  set clipboard=unnamedplus "Linux
+endif
+
 " Show row/col
 set ruler
 
-" Use clipboard
-set clipboard=unnamedplus
+" Show numbers
+set number
 
 " Dont use numbers in terminal
 autocmd TerminalOpen * setlocal nonumber norelativenumber
