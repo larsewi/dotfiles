@@ -5,6 +5,7 @@
 	signingkey = 016C244A62415916E54299F5983FCD7F55D882C1
 [commit]
 	gpgsign = true
+	template = ~/.gitmessage
 [gpg]
 	program = /usr/local/bin/gpg
 [alias]
