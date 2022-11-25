@@ -9,5 +9,4 @@
 [gpg]
 	program = /usr/local/bin/gpg
 [alias]
-	graph = log --all --decorate --oneline --graph
-	plog = log -n 8 --oneline
+	graph = log --all --decorate --oneline --graph -n8
