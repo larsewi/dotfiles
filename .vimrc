@@ -21,6 +21,9 @@ set expandtab
 filetype indent on
 set autoindent
 
+" Enable manpages
+runtime! ftplugin/man.vim
+
 " Use clipboard
 if system('uname -s') == "Darwin\n"
   set clipboard=unnamed "OSX
