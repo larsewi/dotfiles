@@ -24,6 +24,9 @@ set autoindent
 " Enable manpages
 runtime! ftplugin/man.vim
 
+" Dont move cursor when using scroll wheel
+set mouse=a
+
 " Use clipboard
 if system('uname -s') == "Darwin\n"
   set clipboard=unnamed "OSX
