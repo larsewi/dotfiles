@@ -15,11 +15,14 @@ let g:markdown_fenced_languages = ['c', 'cpp', 'python', 'bash', 'json', 'cf3']
 set nofoldenable
 
 " Configure indentation
+filetype indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
-filetype indent on
 set autoindent
+
+" Set search to wrap around to top of file
+set wrapscan 
 
 " Enable manpages
 runtime! ftplugin/man.vim
