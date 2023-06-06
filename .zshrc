@@ -7,9 +7,13 @@ export GPG_TTY
 
 export LANG="en_US.UTF-8"
 
-# For Compilers to find OpenSSL
+# For compilers to find OpenSSL
 export LDFLAGS="-L/usr/local/opt/openssl@3/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@3/include"
 
 # For pkg-config to find OpenSSL
 export PKG_CONFIG_PATH="/usr/local/opt/openssl@3/lib/pkgconfig"
+
+# For compilers to find PSQL
+export LDFLAGS="-L/usr/local/opt/libpq/lib"
+export CPPFLAGS="-I/usr/local/opt/libpq/include"
