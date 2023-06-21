@@ -20,3 +20,6 @@ export CPPFLAGS="-I/usr/local/opt/libpq/include"
 
 # For pkg-config to work with PSQL installed from brew
 export PKG_CONFIG_PATH="/usr/local/opt/libpq/lib/pkgconfig"
+
+# Aliases
+alias superclean="git clean -fxd"
