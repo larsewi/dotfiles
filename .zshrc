@@ -23,6 +23,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/libpq/lib/pkgconfig"
 
 # Aliases
 alias superclean="git clean -fxd"
+alias findline="grep --colour=auto -Irn . -e"
 
 # Disable mouse acceleration
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
