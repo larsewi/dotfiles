@@ -49,6 +49,9 @@ autocmd TerminalOpen * setlocal nonumber norelativenumber
 " Toggle NERDTree
 nnoremap <C-t> :NERDTreeToggle<CR>
 
+" Open preview on <CR> instead
+let NERDTreeCustomOpenArgs = {'file':{'where':'p','keepopen':1,'stay':1}}
+
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
