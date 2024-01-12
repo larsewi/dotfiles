@@ -27,6 +27,7 @@ alias findline="grep --colour=auto -Irn . -e"
 alias la="ls -a"
 alias ll="ls -l"
 alias lal="ls -al"
+alias clearit=clear && printf '\e[3J'
 
 # Disable mouse acceleration
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
