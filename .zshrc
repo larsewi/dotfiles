@@ -28,6 +28,8 @@ alias la="ls -a"
 alias ll="ls -l"
 alias lal="ls -al"
 alias clearit="clear && printf '\e[3J'"
+alias timeis="say --voice=whisper `date`"
+alias stupid='say --voice="Good News" "You stupid bitch"'
 
 # Disable mouse acceleration
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
