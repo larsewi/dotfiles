@@ -31,5 +31,9 @@
         "key": "ctrl+w l",
         "command": "workbench.action.terminal.focusNext",
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen"
     }
 ]
