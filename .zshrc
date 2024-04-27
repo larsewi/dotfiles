@@ -7,26 +7,11 @@ export GPG_TTY
 
 export LANG="en_US.UTF-8"
 
-# For compilers to find OpenSSL
-export LDFLAGS="-L/usr/local/opt/openssl@3/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl@3/include"
-
 # For pkg-config to find OpenSSL
-export PKG_CONFIG_PATH="/usr/local/opt/openssl@3/lib/pkgconfig"
-
-# For compilers to find PSQL
-export LDFLAGS="-L/usr/local/opt/libpq/lib"
-export CPPFLAGS="-I/usr/local/opt/libpq/include"
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/openssl@3/lib/pkgconfig"
 
 # For pkg-config to work with PSQL installed from brew
-export PKG_CONFIG_PATH="/usr/local/opt/libpq/lib/pkgconfig"
-
-# For compiler to find libpq
-export LDFLAGS="-L/usr/local/opt/libpq/lib"
-export CPPFLAGS="-I/usr/local/opt/libpq/include"
-
-# For pkg-config to work with libpq
-export PKG_CONFIG_PATH="/usr/local/opt/libpq/lib/pkgconfig"
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/libpq/lib/pkgconfig"
 
 # Aliases
 alias superclean="git clean -fxd"
@@ -35,8 +20,3 @@ alias la="ls -a"
 alias ll="ls -l"
 alias lal="ls -al"
 alias clearit="clear && printf '\e[3J'"
-alias timeis="say --voice=whisper `date`"
-alias stupid='say --voice="Good News" "You stupid bitch"'
-
-# Disable mouse acceleration
-defaults write .GlobalPreferences com.apple.mouse.scaling -1
