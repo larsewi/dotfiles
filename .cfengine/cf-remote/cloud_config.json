@@ -1,0 +1,11 @@
+{
+  "aws": {
+    "key": "TBD",
+    "secret": "TBD",
+    "key_pair": "larsewi-ed25519",
+    "security_groups": [
+      "cfengine-test"
+    ],
+    "region": "eu-west-1"
+  }
+}
