@@ -43,3 +43,9 @@ let NERDTreeCustomOpenArgs = {'file':{'where':'p','keepopen':1,'stay':1}}
 
 " Disable code folding
 set nofoldenable
+
+" Indent
+set autoindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
