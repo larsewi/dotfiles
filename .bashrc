@@ -133,3 +133,5 @@ alias vpn-pause="openvpn3 session-manage --pause --config /home/larsewi/Document
 
 # Start Python virtual environment
 source ~/.venv/bin/activate
+
+alias git-clean-branches="for i in $(git branch --merged | grep -v main); do git branch -d $i; done"
