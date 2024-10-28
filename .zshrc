@@ -1,6 +1,13 @@
 autoload -U colors && colors
-PS1="%{$fg[green]%}╭──(%{$fg[blue]%}%n☺︎%m%{$fg[green]%})─[%{$fg[yellow]%}%~%{$fg[green]%}]
-╰─%{$reset_color%} %{$fg[blue]%}$%{$reset_color%} "
+PS1="%{$fg[green]%}╭──(%{$reset_color%}"  # ╭──(
+PS1+="%{$fg[blue]%}%n@%m%{$reset_color%}" # <USER>☺︎<HOST>
+PS1+="%{$fg[green]%})─[%{$reset_color%}"  # )─[
+PS1+="%{$fg[yellow]%}%~%{$reset_color%}"  # <CWD>
+PS1+="%{$fg[green]%}]%{$reset_color%}"    # ]
+PS1+=%"{$fg[red]%} %?%{$reset_color%}"    # <EXIT_CODE>
+PS1+="
+%{$fg[green]%}╰─%{$reset_color%} "        # ╰─
+"%{$fg[blue]%}$%{$reset_color%} "         # $
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 export GPG_TTY=$(tty)
