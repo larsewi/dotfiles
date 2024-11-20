@@ -116,22 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-function vpn-start {
-  CONFIG=/home/larsewi/Documents/profile-120.ovpn
-  if openvpn3 sessions-list | grep -qe "Session name: vpn.northern.tech"; then
-    if openvpn3 sessions-list | grep -qe "Status: Connection, Client connection paused"; then
-      openvpn3 session-manage --resume --config $CONFIG
-    else
-      echo "Already started..."
-    fi
-  else
-    openvpn3 session-start --config $CONFIG
-  fi
-}
-
-alias vpn-pause="openvpn3 session-manage --pause --config /home/larsewi/Documents/profile-120.ovpn"
-
 # Start Python virtual environment
 source ~/.venv/bin/activate
 
 alias git-clean-branches="for i in $(git branch --merged | grep -v main); do git branch -d $i; done"
+
+# Enable vi key bindings
+set -o vi
