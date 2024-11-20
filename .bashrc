@@ -123,3 +123,7 @@ alias git-clean-branches="for i in $(git branch --merged | grep -v main); do git
 
 # Enable vi key bindings
 set -o vi
+
+# Set default editor to vim
+export VISUAL=vim
+export EDITOR="$VISUAL"
