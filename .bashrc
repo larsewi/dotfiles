@@ -116,9 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Start Python virtual environment
-source ~/.venv/bin/activate
-
 alias git-clean-branches="for i in $(git branch --merged | grep -v main); do git branch -d $i; done"
 
 # Enable vi key bindings
@@ -127,3 +124,11 @@ set -o vi
 # Set default editor to vim
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# Aliases to make your life easier
+alias venv="source ~/.venv/bin/activate"
+
+alias vpn-start="openvpn3 session-start --config ntech"
+alias vpn-restart="openvpn3 session-manage --restart --config ntech"
+alias vpn-stop="openvpn3 session-manage --disconnect --config ntech"
+alias vpn-list="openvpn3 sessions-list"
