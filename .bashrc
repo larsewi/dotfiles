@@ -128,6 +128,8 @@ export EDITOR="$VISUAL"
 # Aliases to make your life easier
 alias venv="source ~/.venv/bin/activate"
 
+alias gdb="gdb -silent"
+
 alias vpn-start="openvpn3 session-start --config ntech"
 alias vpn-restart="openvpn3 session-manage --restart --config ntech"
 alias vpn-stop="openvpn3 session-manage --disconnect --config ntech"
