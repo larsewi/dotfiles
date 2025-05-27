@@ -1,6 +1,7 @@
 -I.
 -Ilibenv/
 -Icf-agent/
+-Icf-check/
 -Ilibcfnet/
 -Ilibpromises/
 -Ilibcfecompat/
