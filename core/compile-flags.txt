@@ -1,0 +1,9 @@
+-I.
+-Ilibenv/
+-Icf-agent/
+-Ilibcfnet/
+-Ilibpromises/
+-Ilibcfecompat/
+-Ilibntech/libutils/
+-I/usr/include/libxml2/
+-DHAVE_CONFIG_H
