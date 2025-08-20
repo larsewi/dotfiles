@@ -137,10 +137,11 @@ alias vpn-stop="openvpn3 session-manage --disconnect --config ntech"
 alias vpn-list="openvpn3 sessions-list"
 
 remove_cfengine() {
-   sudo systemctl stop cfengine3
-   sudo apt remove -y cfengine-nova-hub
-   sudo rm -rf /var/cfengine/
-   sudo rm -rf /opt/cfengine/
-   sudo rm -rf /var/log/CFEngine-Install*log
-   sudo rm -rf /var/log/postgresql.log
+    sudo systemctl stop cfengine3
+    sudo apt remove -y cfengine-nova-hub
+    sudo apt remove -y cfengine-community
+    sudo rm -rf /var/cfengine/
+    sudo rm -rf /opt/cfengine/
+    sudo rm -rf /var/log/CFEngine-Install*log
+    sudo rm -rf /var/log/postgresql.log
 }
