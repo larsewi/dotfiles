@@ -25,7 +25,7 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -125,12 +125,22 @@ set -o vi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# Sometimes required for gpg password prompt to work
+export GPG_TTY=$(tty)
+
 # Aliases to make your life easier
 alias venv="source ~/.venv/bin/activate"
-
 alias gdb="gdb -silent"
-
 alias vpn-start="openvpn3 session-start --config ntech"
 alias vpn-restart="openvpn3 session-manage --restart --config ntech"
 alias vpn-stop="openvpn3 session-manage --disconnect --config ntech"
 alias vpn-list="openvpn3 sessions-list"
+
+remove_cfengine() {
+   sudo systemctl stop cfengine3
+   sudo apt remove -y cfengine-nova-hub
+   sudo rm -rf /var/cfengine/
+   sudo rm -rf /opt/cfengine/
+   sudo rm -rf /var/log/CFEngine-Install*log
+   sudo rm -rf /var/log/postgresql.log
+}
