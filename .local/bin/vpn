@@ -1,0 +1,22 @@
+#!/bin/bash
+
+case "$1" in
+    start)
+        openvpn3 session-start --config ntech
+        sleep 2
+        sudo resolvectl default-route wlo1 false
+        echo "VPN connected"
+        ;;
+    stop)
+        openvpn3 session-manage --config ntech --disconnect
+        sudo resolvectl default-route wlo1 true
+        echo "VPN disconnected"
+        ;;
+    list)
+        openvpn3 sessions-list
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|list}"
+        exit 1
+        ;;
+esac
