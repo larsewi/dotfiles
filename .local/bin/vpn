@@ -1,15 +1,17 @@
 #!/bin/bash
 
+LINK=wlp98s0
+
 case "$1" in
     start)
         openvpn3 session-start --config ntech
         sleep 2
-        sudo resolvectl default-route wlo1 false
+        sudo resolvectl default-route $LINK false
         echo "VPN connected"
         ;;
     stop)
         openvpn3 session-manage --config ntech --disconnect
-        sudo resolvectl default-route wlo1 true
+        sudo resolvectl default-route LINK true
         echo "VPN disconnected"
         ;;
     list)
