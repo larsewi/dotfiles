@@ -5,7 +5,7 @@
 #    $ mkdir -p ~/.local/bin/
 #    $ mv vpn ~/.local/bin/
 # 2. Add ~/.local/bin/ to PATH
-#    $ echo 'export PATH=$PATH:~/.local/bin/' >> ~/.bashrc
+#    $ echo 'export PATH="$PATH:~/.local/bin/"' >> ~/.bashrc
 # 3. Make script executable
 #    $ chmod +x ~/local/bin/vpn
 # 4. Import config
