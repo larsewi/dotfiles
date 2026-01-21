@@ -9,7 +9,7 @@
 # 3. Make script executable
 #    $ chmod +x ~/local/bin/vpn
 # 4. Import config
-#    $ openvpn3 config-import --name ntech --persistent --config <PATH_TO_CONF>`
+#    $ openvpn3 config-import --name ntech --persistent --config <PATH_TO_CONF>
 #
 # For Ubuntu users, systemd-resolved does not work well with OpenVPN3. If you
 # are experiencing issues. Try the following commands:
