@@ -1,25 +1,44 @@
 #!/bin/bash
-
-LINK=wlp98s0
+#
+# First time setup:
+# 1. Move this script to ~/.local/bin/
+#    $ mkdir -p ~/.local/bin/
+#    $ mv vpn ~/.local/bin/
+# 2. Add ~/.local/bin/ to PATH
+#    $ echo 'export PATH=$PATH:~/.local/bin/' >> ~/.bashrc
+# 3. Make script executable
+#    $ chmod +x ~/local/bin/vpn
+# 4. Import config
+#    $ openvpn3 config-import --name ntech --persistent --config <PATH_TO_CONF>`
+#
+# For Ubuntu users, systemd-resolved does not work well with OpenVPN3. If you
+# are experiencing issues. Try the following commands:
+# $ sudo openvpn3-admin netcfg-service --config-unset systemd-resolved
+# $ sudo openvpn3-admin netcfg-service --config-set resolv-conf /etc/resolv.conf
+# $ sudo pkill -f openvpn3-service-netcfg
+#
 
 case "$1" in
     start)
-        openvpn3 session-start --config ntech
-        sleep 2
-        sudo resolvectl default-route $LINK false
+        # Don't start multiple sessions
+        if openvpn3 sessions-list | grep "No sessions available"; then
+            openvpn3 session-start --config ntech
+        fi
         echo "VPN connected"
         ;;
     stop)
         openvpn3 session-manage --config ntech --disconnect
-        sudo resolvectl default-route LINK true
         echo "VPN disconnected"
         ;;
-    list)
+    restart)
+        openvpn3 session-manage --restart --config ntech
+        echo "VPN restarted"
+        ;;
+    list|status)
         openvpn3 sessions-list
-        resolvectl status
         ;;
     *)
-        echo "Usage: $0 {start|stop|list}"
+        echo "Usage: $0 {start|stop|restart|list}"
         exit 1
         ;;
 esac
