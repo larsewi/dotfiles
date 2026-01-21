@@ -27,7 +27,7 @@ case "$1" in
         echo "VPN connected"
         ;;
     stop)
-        openvpn3 session-manage --config ntech --disconnect
+        openvpn3 session-manage --disconnect --config ntech
         echo "VPN disconnected"
         ;;
     restart)
