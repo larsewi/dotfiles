@@ -129,12 +129,19 @@ export EDITOR="$VISUAL"
 export GPG_TTY=$(tty)
 
 # Aliases to make your life easier
-alias venv="source ~/.venv/bin/activate"
 alias gdb="gdb -silent"
-alias vpn-start="openvpn3 session-start --config ntech"
-alias vpn-restart="openvpn3 session-manage --restart --config ntech"
-alias vpn-stop="openvpn3 session-manage --disconnect --config ntech"
-alias vpn-list="openvpn3 sessions-list"
+alias ..="cd .."
+
+venv() {
+    if [ -d .venv ]; then
+        echo "Using existing virtual environment"
+    else
+        echo "Creating new virtual environment"
+        python3 -m venv .venv
+    fi
+    source .venv/bin/activate
+}
+
 
 remove_cfengine() {
     sudo systemctl stop cfengine3
