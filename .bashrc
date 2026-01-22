@@ -128,6 +128,21 @@ export EDITOR="$VISUAL"
 # Sometimes required for gpg password prompt to work
 export GPG_TTY=$(tty)
 
+# Find libraries in /usr/local/lib/
+export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
+
+# Workaround for systemd logging thing
+export LDFLAGS=-Wl,--copy-dt-needed-entries
+
+# For user installed software
+export PATH="$PATH:~/.local/bin/"
+
+# Needed by buildscripts to locate CFEngine repos
+export NTECH_ROOT="$HOME/ntech"
+
+# Default provider for Vagrant
+export VAGRANT_DEFAULT_PROVIDER=libvirt
+
 # Aliases to make your life easier
 alias gdb="gdb -silent"
 alias ..="cd .."
@@ -141,7 +156,6 @@ venv() {
     fi
     source .venv/bin/activate
 }
-
 
 remove_cfengine() {
     sudo systemctl stop cfengine3
